@@ -1,5 +1,5 @@
 const fs = require('node:fs');
-const aiaToJSON = require('./aiaToJSON');
+const aiaToJSON = require('./aiaToJson');
 const content = fs.readFileSync('./samples/Default Actions.aia', 'utf8');
 
 const decode = true;

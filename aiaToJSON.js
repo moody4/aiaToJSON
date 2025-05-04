@@ -1,11 +1,11 @@
 const hexToUtf8 = (str) => decodeURIComponent(str.replace(/\s+/g, '').replace(/[0-9a-f]{2}/g, '%$&'));
 const decimalToAscii = (str) => hexToUtf8(Number(str).toString(16));
 
-const aiaToJSON = (str, decode = false) => {
+const aiaToJSON = (content, decode = false) => {
    // Sometimes the value of the "/value" key is an ASCII string encoded as decimal.
    // Converter will not decode such values, even if decode = true, because it is impossible to determine that the value was actually encoded.
 
-   const data = str.split("/");
+   const data = content.split("/");
    const json = {};
    const stack = [json];
    let current = stack[0];

@@ -1,5 +1,18 @@
-# AIA to JSON converter
+# AIA to JSON Converter
 
-Converts Adobe Illustrator action schema to JSON. Should be able to parse any action set that can be loaded into the Actions panel.
+Converts Adobe Illustrator action schema to JSON. Should be able to parse any action set that can be loaded into the Actions Panel.
 
-```node ./test.js```
+Takes only two parameters:
+- `content:` string in proper `aia` format.
+- `decode:` boolean property that controls whether or not to decode hex and decimal encoded values.
+
+```js
+const content = fs.readFileSync('./samples/Default Actions.aia', 'utf8');
+const decode = true;
+const actionSet = aiaToJSON(content, decode);
+```
+
+Test on sample
+```js
+node ./test.js
+```
