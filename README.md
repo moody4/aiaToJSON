@@ -16,3 +16,5 @@ Test on sample
 ```js
 node ./test.js
 ```
+
+#### See details here: [https://moody4.github.io/blog/en/aiaToJson](https://moody4.github.io/blog/en/posts/aia-to-json/)
